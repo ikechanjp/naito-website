@@ -1,19 +1,15 @@
 'use client'
 
-import { SplineScene } from "@/components/ui/spline-scene";
 import { Card } from "@/components/ui/card";
-import { Spotlight } from "@/components/ui/spotlight";
-import { SparklesText } from "@/components/ui/sparkles-text";
+import { FloatingElements } from "@/components/ui/floating-elements";
+import { SparkleText } from "@/components/ui/sparkle-text";
 import { ArrowRight, Play } from "lucide-react";
 
 export function HeroSection() {
   return (
     <section className="min-h-screen relative overflow-hidden bg-black">
       {/* Background Spotlight */}
-      <Spotlight
-        className="-top-40 left-0 md:left-60 md:-top-20"
-        fill="white"
-      />
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-pink-900/20"></div>
       
       {/* Main Content */}
       <div className="container mx-auto px-4 py-20 max-w-7xl">
@@ -24,10 +20,9 @@ export function HeroSection() {
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight">
                 AI × 副業で
                 <br />
-                <SparklesText 
+                <SparkleText 
                   text="時間と夢" 
                   className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
-                  colors={{ first: "#9E7AFF", second: "#FE8BBB" }}
                 />
                 を最速実現
               </h1>
@@ -69,13 +64,26 @@ export function HeroSection() {
             </div>
           </div>
           
-          {/* Right Content - 3D Scene */}
+          {/* Right Content - Interactive Display */}
           <div className="relative">
-            <Card className="h-[400px] md:h-[500px] lg:h-[600px] bg-black/50 backdrop-blur-sm border-gray-800 relative overflow-hidden">
-              <SplineScene 
-                scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-                className="w-full h-full"
-              />
+            <Card className="h-[400px] md:h-[500px] lg:h-[600px] bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-sm border-gray-800 relative overflow-hidden">
+              <FloatingElements />
+              
+              {/* Content */}
+              <div className="w-full h-full flex items-center justify-center relative z-10">
+                <div className="text-center space-y-6">
+                  <div className="text-6xl">🚀</div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-white">
+                    AI × 副業で<br />
+                    <span className="text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text">
+                      未来を創造
+                    </span>
+                  </h3>
+                  <p className="text-gray-300 max-w-xs">
+                    最新技術と実践的なノウハウで、あなたの可能性を最大限に引き出します
+                  </p>
+                </div>
+              </div>
               
               {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />

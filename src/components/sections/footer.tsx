@@ -1,7 +1,5 @@
 'use client'
 
-import { Twitter, FileText, GraduationCap, Mail } from "lucide-react";
-
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -40,41 +38,14 @@ export function Footer() {
               </ul>
             </div>
             
-            {/* Social */}
+            {/* Contact */}
             <div className="space-y-4">
-              <h4 className="text-lg font-semibold text-white">Follow Me</h4>
-              <div className="flex space-x-4">
-                <a 
-                  href="https://x.com/nikdjapan" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-blue-400 transition-colors"
-                >
-                  <Twitter className="w-6 h-6" />
-                </a>
-                <a 
-                  href="https://note.com/nikd" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-green-400 transition-colors"
-                >
-                  <FileText className="w-6 h-6" />
-                </a>
-                <a 
-                  href="https://www.udemy.com/user/chi-tian-xian-liang/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
-                >
-                  <GraduationCap className="w-6 h-6" />
-                </a>
-                <a 
-                  href="mailto:info@nikdclub.com"
-                  className="text-gray-400 hover:text-pink-400 transition-colors"
-                >
-                  <Mail className="w-6 h-6" />
-                </a>
-              </div>
+              <h4 className="text-lg font-semibold text-white">Contact</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><a href="mailto:info@nikdclub.com" className="hover:text-white transition-colors">お問い合わせ</a></li>
+                <li><a href="#contact" className="hover:text-white transition-colors">SNS・メディア</a></li>
+                <li><a href="#contact" className="hover:text-white transition-colors">Newsletter登録</a></li>
+              </ul>
             </div>
           </div>
           

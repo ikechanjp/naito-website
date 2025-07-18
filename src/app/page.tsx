@@ -6,7 +6,7 @@ import { Footer } from "@/components/sections/footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-black text-white" style={{ backgroundColor: '#000000', color: '#ffffff' }}>
       <HeroSection />
       <AboutSection />
       <ServicesSection />

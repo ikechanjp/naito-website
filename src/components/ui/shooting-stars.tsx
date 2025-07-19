@@ -2,60 +2,68 @@
 
 import { useEffect, useState } from 'react';
 
-interface Star {
+interface Particle {
   id: number;
   x: number;
   y: number;
+  vx: number;
+  vy: number;
   size: number;
-  speed: number;
   opacity: number;
+  life: number;
+  maxLife: number;
 }
 
-export function ShootingStars() {
-  const [stars, setStars] = useState<Star[]>([]);
+export function MouseStarDust() {
+  const [particles, setParticles] = useState<Particle[]>([]);
 
   useEffect(() => {
-    const createStar = () => {
-      const newStar: Star = {
-        id: Date.now() + Math.random(),
-        x: -100,
-        y: Math.random() * window.innerHeight * 0.6,
-        size: Math.random() * 3 + 1,
-        speed: Math.random() * 3 + 2,
-        opacity: Math.random() * 0.8 + 0.2,
-      };
-      
-      setStars(prev => [...prev, newStar]);
-      
-      // 5秒後に削除
-      setTimeout(() => {
-        setStars(prev => prev.filter(s => s.id !== newStar.id));
-      }, 5000);
+    const handleMouseMove = (e: MouseEvent) => {
+      // マウス移動時に星屑を生成
+      const newParticles: Particle[] = [];
+      const particleCount = Math.random() * 3 + 2; // 2-5個の粒子
+
+      for (let i = 0; i < particleCount; i++) {
+        const particle: Particle = {
+          id: Date.now() + Math.random() + i,
+          x: e.clientX + (Math.random() - 0.5) * 20,
+          y: e.clientY + (Math.random() - 0.5) * 20,
+          vx: (Math.random() - 0.5) * 4,
+          vy: (Math.random() - 0.5) * 4,
+          size: Math.random() * 4 + 1,
+          opacity: Math.random() * 0.8 + 0.2,
+          life: 0,
+          maxLife: Math.random() * 60 + 40, // 40-100フレーム
+        };
+        newParticles.push(particle);
+      }
+
+      setParticles(prev => [...prev, ...newParticles]);
     };
 
-    // テスト用：最初に1つ作成
-    createStar();
-    
-    // 5秒間隔でテスト（後で10秒に変更）
-    const interval = setInterval(createStar, 5000);
+    document.addEventListener('mousemove', handleMouseMove);
 
     return () => {
-      clearInterval(interval);
+      document.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
 
   useEffect(() => {
-    const animateStars = () => {
-      setStars(prev => 
-        prev.map(star => ({
-          ...star,
-          x: star.x + star.speed,
-          y: star.y + star.speed * 0.5,
-        })).filter(star => star.x < window.innerWidth + 200)
+    const animateParticles = () => {
+      setParticles(prev => 
+        prev.map(particle => ({
+          ...particle,
+          x: particle.x + particle.vx,
+          y: particle.y + particle.vy,
+          vx: particle.vx * 0.98, // 摩擦
+          vy: particle.vy * 0.98,
+          life: particle.life + 1,
+          opacity: particle.opacity * (1 - particle.life / particle.maxLife),
+        })).filter(particle => particle.life < particle.maxLife)
       );
     };
 
-    const animationInterval = setInterval(animateStars, 16); // 60fps
+    const animationInterval = setInterval(animateParticles, 16); // 60fps
 
     return () => {
       clearInterval(animationInterval);
@@ -64,35 +72,24 @@ export function ShootingStars() {
 
   return (
     <div className="fixed inset-0 pointer-events-none z-10 overflow-hidden">
-      {stars.map((star) => (
+      {particles.map((particle) => (
         <div
-          key={star.id}
+          key={particle.id}
           className="absolute"
           style={{
-            left: star.x,
-            top: star.y,
-            opacity: star.opacity,
+            left: particle.x,
+            top: particle.y,
+            transform: 'translate(-50%, -50%)',
           }}
         >
-          {/* 流れ星本体 */}
+          {/* 星屑 */}
           <div 
-            className="bg-white rounded-full shadow-lg"
+            className="bg-gradient-to-r from-white via-yellow-200 to-pink-200 rounded-full"
             style={{
-              width: star.size,
-              height: star.size,
-              boxShadow: `0 0 ${star.size * 2}px rgba(255, 255, 255, 0.8)`,
-            }}
-          />
-          {/* 流れ星の尻尾 */}
-          <div 
-            className="absolute bg-gradient-to-r from-white via-blue-200 to-transparent"
-            style={{
-              width: star.size * 20,
-              height: star.size * 0.5,
-              left: -star.size * 20,
-              top: star.size * 0.25,
-              transform: 'rotate(15deg)',
-              opacity: 0.6,
+              width: particle.size,
+              height: particle.size,
+              opacity: particle.opacity,
+              boxShadow: `0 0 ${particle.size * 2}px rgba(255, 255, 255, ${particle.opacity * 0.5})`,
             }}
           />
         </div>

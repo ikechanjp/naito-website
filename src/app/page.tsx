@@ -3,12 +3,12 @@ import { AboutSection } from "@/components/sections/about";
 import { ServicesSection } from "@/components/sections/services";
 import { ContactSection } from "@/components/sections/contact";
 import { Footer } from "@/components/sections/footer";
-import { ShootingStars } from "@/components/ui/shooting-stars";
+import { MouseStarDust } from "@/components/ui/shooting-stars";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white" style={{ backgroundColor: '#000000', color: '#ffffff' }}>
-      <ShootingStars />
+      <MouseStarDust />
       <HeroSection />
       <AboutSection />
       <ServicesSection />

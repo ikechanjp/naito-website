@@ -3,7 +3,6 @@
 import { Card } from "@/components/ui/card";
 import { FloatingElements } from "@/components/ui/floating-elements";
 import { SparkleText } from "@/components/ui/sparkle-text";
-import { ArrowRight, Play } from "lucide-react";
 
 export function HeroSection() {
   return (

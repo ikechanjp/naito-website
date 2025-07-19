@@ -1,7 +1,7 @@
 'use client'
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Play, Users, Mail, BookOpen, ExternalLink } from "lucide-react";
+import { Play, Users, Mail } from "lucide-react";
 
 export function ServicesSection() {
   const services = [

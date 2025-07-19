@@ -20,7 +20,6 @@ export function MouseStarDust() {
   useEffect(() => {
     let lastX = 0;
     let lastY = 0;
-    let animationId: number;
 
     const handleMouseMove = (e: MouseEvent) => {
       const currentX = e.clientX;
@@ -57,9 +56,6 @@ export function MouseStarDust() {
 
     return () => {
       document.removeEventListener('mousemove', handleMouseMove);
-      if (animationId) {
-        cancelAnimationFrame(animationId);
-      }
     };
   }, []);
 

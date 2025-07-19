@@ -1,7 +1,5 @@
 'use client'
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Award, Users, BookOpen, Target } from "lucide-react";
 
 export function AboutSection() {
   return (

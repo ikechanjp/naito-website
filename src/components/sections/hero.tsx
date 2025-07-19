@@ -17,48 +17,53 @@ export function HeroSection() {
           {/* Main Title */}
           <div className="space-y-6">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-tight">
-              AI × 副業で
-              <br />
               <SparkleText 
-                text="時間と夢" 
+                text="AI × 副業" 
                 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
               />
-              を最速実現
+              <br />
+              パパママに
+              <span className="bg-gradient-to-r from-blue-400 to-pink-400 bg-clip-text text-transparent">「時短」</span>
+              と
+              <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">「収益」</span>
+              を
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Udemyベストセラー講師／AI活用コンサルタント ないと
+              🎯 Udemyベストセラー＆Business講師
               <br />
-              忙しい社会人が &quot;AI時短 → 副業収益化&quot; へ踏み出す伴走者
+              💡 AI時短化でパパママを応援する実践型サポーター
             </p>
           </div>
           
           {/* CTA Buttons - Centered */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold transition-all hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 text-lg">
-              <Play className="w-5 h-5 mr-2" />
-              最新講座を見る
+            <button className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-semibold transition-all hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 text-lg">
+              📚 Udemy講座を見る
             </button>
             
-            <button className="inline-flex items-center justify-center px-8 py-4 border border-gray-600 text-white rounded-lg font-semibold transition-all hover:bg-white hover:text-black text-lg">
-              コミュニティに参加
-              <ArrowRight className="w-5 h-5 ml-2" />
+            <button className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-500 text-white rounded-lg font-semibold transition-all hover:scale-105 hover:shadow-lg hover:shadow-pink-500/25 text-lg">
+              📧 無料メルマガ（白 or 青）
             </button>
           </div>
           
           {/* Stats - Centered */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 pt-12 max-w-2xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 pt-12 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold text-white">2000+</div>
-              <div className="text-sm sm:text-base text-gray-400">受講生</div>
+              <div className="text-2xl sm:text-3xl font-bold text-white">2,000名以上</div>
+              <div className="text-sm sm:text-base text-gray-400">受講</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold text-white">1000万</div>
-              <div className="text-sm sm:text-base text-gray-400">月間インプレッション</div>
+              <div className="text-2xl sm:text-3xl font-bold text-white">Udemy Business</div>
+              <div className="text-sm sm:text-base text-gray-400">2講座採用</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold text-white">複数</div>
-              <div className="text-sm sm:text-base text-gray-400">Business採用講座</div>
+              <div className="text-2xl sm:text-3xl font-bold text-white">EverImpact</div>
+              <div className="text-sm sm:text-base text-gray-400">主宰</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl sm:text-3xl font-bold text-white">Kindleベスト</div>
+              <div className="text-sm sm:text-base text-gray-400">セラー作家</div>
             </div>
           </div>
         </div>

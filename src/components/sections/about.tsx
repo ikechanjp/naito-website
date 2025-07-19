@@ -11,7 +11,7 @@ export function AboutSection() {
           {/* Header */}
           <div className="text-center space-y-6 mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
-              🧑‍💼 About<span className="text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text">（ないととは？）</span>
+              🧑‍💼 <span className="text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text">ないとって誰？</span>
             </h2>
           </div>
           

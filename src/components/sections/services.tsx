@@ -43,7 +43,7 @@ export function ServicesSection() {
           </div>
           
           {/* Services Grid */}
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {services.map((service, index) => (
               <Card 
                 key={index} 

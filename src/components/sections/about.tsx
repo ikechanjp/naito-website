@@ -39,7 +39,7 @@ export function AboutSection() {
               <span className="text-white font-medium">Kindleベストセラー作家</span>
             </div>
             <div className="flex items-center space-x-3 bg-gray-800/50 px-4 py-3 rounded-lg border border-gray-700">
-              <span className="text-2xl">🚀</span>
+              <span className="text-2xl">🌐</span>
               <span className="text-white font-medium">EverImpact主宰</span>
             </div>
           </div>

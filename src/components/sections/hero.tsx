@@ -15,11 +15,19 @@ export function HeroSection() {
       <div className="container mx-auto px-4 min-h-screen flex items-center justify-center">
         <div className="text-center space-y-8 max-w-4xl w-full">
           {/* Main Title */}
-          <div className="space-y-6">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-tight">
+          <div className="space-y-8">
+            {/* Name prominently displayed */}
+            <div className="text-center">
+              <SparkleText 
+                text="ないと" 
+                className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent"
+              />
+            </div>
+            
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
               <SparkleText 
                 text="AI × 副業" 
-                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
               />
               <br />
               パパママに
@@ -36,34 +44,24 @@ export function HeroSection() {
             </p>
           </div>
           
-          {/* CTA Buttons - Centered */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-semibold transition-all hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 text-lg">
-              📚 Udemy講座を見る
-            </button>
-            
-            <button className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-500 text-white rounded-lg font-semibold transition-all hover:scale-105 hover:shadow-lg hover:shadow-pink-500/25 text-lg">
-              📧 無料メルマガ（白 or 青）
-            </button>
-          </div>
           
           {/* Stats - Centered */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 pt-12 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 pt-12 max-w-5xl mx-auto">
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-white">2,000名以上</div>
-              <div className="text-sm sm:text-base text-gray-400">受講</div>
+              <div className="text-base sm:text-lg font-semibold text-white">Udemy受講者</div>
+              <div className="text-base sm:text-lg font-semibold text-white">2,000名以上</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-white">Udemy Business</div>
-              <div className="text-sm sm:text-base text-gray-400">2講座採用</div>
+              <div className="text-base sm:text-lg font-semibold text-white">Udemy Business</div>
+              <div className="text-base sm:text-lg font-semibold text-white">2講座採用</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-white">EverImpact</div>
-              <div className="text-sm sm:text-base text-gray-400">主宰</div>
+              <div className="text-base sm:text-lg font-semibold text-white">EverImpact</div>
+              <div className="text-base sm:text-lg font-semibold text-white">主宰</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-white">Kindleベスト</div>
-              <div className="text-sm sm:text-base text-gray-400">セラー作家</div>
+              <div className="text-base sm:text-lg font-semibold text-white">Kindleベストセラー</div>
+              <div className="text-base sm:text-lg font-semibold text-white">作家</div>
             </div>
           </div>
         </div>

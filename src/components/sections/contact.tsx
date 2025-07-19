@@ -93,14 +93,12 @@ export function ContactSection() {
               <p className="text-gray-300">AI最新情報 + 限定クーポンを定期配信</p>
             </CardHeader>
             <CardContent>
-              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                <input
-                  type="email"
-                  placeholder="メールアドレス"
-                  className="flex-1 px-4 py-3 rounded-lg bg-gray-800/50 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                />
-                <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold transition-all hover:scale-105 hover:shadow-lg">
-                  登録する
+              <div className="text-center">
+                <button 
+                  className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold transition-all hover:scale-105 hover:shadow-lg text-lg"
+                  onClick={() => window.open('https://nikdclub.com/p/r/aKjODsfb', '_blank')}
+                >
+                  📧 メルマガ登録する
                 </button>
               </div>
               <p className="text-center text-sm text-gray-400 mt-4">

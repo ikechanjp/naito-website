@@ -138,3 +138,22 @@
 .animate-spotlight {
   animation: spotlight 2s ease .75s 1 forwards;
 }
+
+@keyframes shooting-star {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0);
+  }
+  10% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+  90% {
+    opacity: 0.8;
+    transform: translate(var(--end-x), var(--end-y)) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--end-x), var(--end-y)) scale(0);
+  }
+}

@@ -8,7 +8,7 @@ export function ServicesSection() {
     {
       icon: <Play className="w-8 h-8 text-purple-400" />,
       title: "Udemy講座",
-      description: "AI時短术・Midjourney・Gammaなど実践的講座群",
+      description: "AI時短化・Midjourney・Gammaなど実践的講座群",
       link: "https://www.udemy.com/user/chi-tian-xian-liang/",
       gradient: "from-blue-500 to-purple-600",
       emoji: "🎓"
@@ -17,7 +17,7 @@ export function ServicesSection() {
       icon: <Users className="w-8 h-8 text-pink-400" />,
       title: "EverImpact",
       description: "Udemy講師デビュー支援コミュニティ",
-      link: "#",
+      link: "https://lp.diet-mii029.com/3344-2/",
       gradient: "from-pink-500 to-red-500",
       emoji: "🚀"
     },
@@ -28,14 +28,6 @@ export function ServicesSection() {
       link: "https://www.amazon.co.jp/stores/ないと/author/B0912GFJ41?ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true",
       gradient: "from-green-500 to-blue-500",
       emoji: "📘"
-    },
-    {
-      icon: <BookOpen className="w-8 h-8 text-green-400" />,
-      title: "コンサルタント",
-      description: "AI活用・副業收益化の個別相談サポート",
-      link: "#",
-      gradient: "from-purple-500 to-pink-500",
-      emoji: "💡"
     }
   ];
 
@@ -46,12 +38,12 @@ export function ServicesSection() {
           {/* Header */}
           <div className="text-center space-y-6 mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
-              📦 <span className="text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text">AI × 副業で成果を出す4つのサービス</span>
+              📦 <span className="text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text">AI × 副業で成果を出す3つのサービス</span>
             </h2>
           </div>
           
           {/* Services Grid */}
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <Card 
                 key={index} 

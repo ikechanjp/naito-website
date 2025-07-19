@@ -4,12 +4,11 @@ import { useEffect, useState } from 'react';
 
 interface Star {
   id: number;
-  startX: number;
-  startY: number;
-  endX: number;
-  endY: number;
-  duration: number;
-  delay: number;
+  x: number;
+  y: number;
+  size: number;
+  speed: number;
+  opacity: number;
 }
 
 export function ShootingStars() {
@@ -17,33 +16,49 @@ export function ShootingStars() {
 
   useEffect(() => {
     const createStar = () => {
-      const star: Star = {
+      const newStar: Star = {
         id: Date.now() + Math.random(),
-        startX: Math.random() * window.innerWidth,
-        startY: Math.random() * (window.innerHeight * 0.3), // 上部30%から開始
-        endX: Math.random() * window.innerWidth,
-        endY: window.innerHeight + 100, // 画面下部まで
-        duration: 1500 + Math.random() * 1000, // 1.5-2.5秒
-        delay: 0,
+        x: -100,
+        y: Math.random() * window.innerHeight * 0.6,
+        size: Math.random() * 3 + 1,
+        speed: Math.random() * 3 + 2,
+        opacity: Math.random() * 0.8 + 0.2,
       };
       
-      setStars(prev => [...prev.slice(-2), star]); // 最大3つまで保持
+      setStars(prev => [...prev, newStar]);
       
-      // アニメーション終了後に削除
+      // 5秒後に削除
       setTimeout(() => {
-        setStars(prev => prev.filter(s => s.id !== star.id));
-      }, star.duration + 500);
+        setStars(prev => prev.filter(s => s.id !== newStar.id));
+      }, 5000);
     };
 
-    // 10秒に1回流れ星を作成
-    const interval = setInterval(createStar, 10000);
+    // テスト用：最初に1つ作成
+    createStar();
     
-    // 初回実行（3秒後）
-    const initialTimeout = setTimeout(createStar, 3000);
+    // 5秒間隔でテスト（後で10秒に変更）
+    const interval = setInterval(createStar, 5000);
 
     return () => {
       clearInterval(interval);
-      clearTimeout(initialTimeout);
+    };
+  }, []);
+
+  useEffect(() => {
+    const animateStars = () => {
+      setStars(prev => 
+        prev.map(star => ({
+          ...star,
+          x: star.x + star.speed,
+          y: star.y + star.speed * 0.5,
+        })).filter(star => star.x < window.innerWidth + 200)
+      );
+    };
+
+    const animationInterval = setInterval(animateStars, 16); // 60fps
+
+    return () => {
+      clearInterval(animationInterval);
     };
   }, []);
 
@@ -52,27 +67,32 @@ export function ShootingStars() {
       {stars.map((star) => (
         <div
           key={star.id}
-          className="absolute w-1 h-1 bg-white rounded-full opacity-0 animate-shooting-star"
+          className="absolute"
           style={{
-            left: star.startX,
-            top: star.startY,
-            '--end-x': `${star.endX - star.startX}px`,
-            '--end-y': `${star.endY - star.startY}px`,
-            '--duration': `${star.duration}ms`,
-            '--delay': `${star.delay}ms`,
-            animation: `shooting-star ${star.duration}ms ease-out ${star.delay}ms forwards`,
-          } as React.CSSProperties & { [key: string]: string }}
+            left: star.x,
+            top: star.y,
+            opacity: star.opacity,
+          }}
         >
+          {/* 流れ星本体 */}
+          <div 
+            className="bg-white rounded-full shadow-lg"
+            style={{
+              width: star.size,
+              height: star.size,
+              boxShadow: `0 0 ${star.size * 2}px rgba(255, 255, 255, 0.8)`,
+            }}
+          />
           {/* 流れ星の尻尾 */}
           <div 
-            className="absolute bg-gradient-to-r from-white via-blue-200 to-transparent rounded-full"
+            className="absolute bg-gradient-to-r from-white via-blue-200 to-transparent"
             style={{
-              width: '40px',
-              height: '2px',
-              right: '0',
-              top: '-0.5px',
-              transformOrigin: 'right center',
-              transform: `rotate(${Math.atan2(star.endY - star.startY, star.endX - star.startX)}rad)`,
+              width: star.size * 20,
+              height: star.size * 0.5,
+              left: -star.size * 20,
+              top: star.size * 0.25,
+              transform: 'rotate(15deg)',
+              opacity: 0.6,
             }}
           />
         </div>

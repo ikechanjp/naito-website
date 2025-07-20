@@ -1,33 +1,49 @@
 'use client'
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Play, Users, Mail } from "lucide-react";
+import { Star, Clock, Users } from "lucide-react";
 
 export function ServicesSection() {
-  const services = [
+  const courses = [
     {
-      icon: <Play className="w-8 h-8 text-purple-400" />,
-      title: "Udemy講座",
-      description: "AI時短化・Midjourney・Gammaなど実践的講座群",
-      link: "https://www.udemy.com/user/chi-tian-xian-liang/",
+      title: "音声入力＆AI文字起こしで超時短術",
+      description: "音声認識とAIを活用した効率的な文字起こし・文書作成術",
+      link: "https://www.udemy.com/course/voice_input/?couponCode=202506EFR",
       gradient: "from-blue-500 to-purple-600",
-      emoji: "🎓"
+      emoji: "🎤",
+      duration: "3時間",
+      students: "500+",
+      rating: "4.8"
     },
     {
-      icon: <Users className="w-8 h-8 text-pink-400" />,
-      title: "EverImpact",
-      description: "Udemy講師デビュー支援コミュニティ",
-      link: "https://lp.diet-mii029.com/3344-2/",
-      gradient: "from-pink-500 to-red-500",
-      emoji: "🚀"
+      title: "Midjourney&にじジャーニー入門",
+      description: "AI画像生成ツールの基礎から実践的な活用方法まで",
+      link: "https://www.udemy.com/course/midjourneyai/?couponCode=202506AZX",
+      gradient: "from-purple-500 to-pink-600",
+      emoji: "🎨",
+      duration: "4時間",
+      students: "1200+", 
+      rating: "4.9"
     },
     {
-      icon: <Mail className="w-8 h-8 text-blue-400" />,
-      title: "Kindle書籍",
-      description: "『Midjourney超入門』ベストセラー",
-      link: "https://www.amazon.co.jp/stores/ないと/author/B0912GFJ41?ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true",
+      title: "AIで超時短コンテンツ作成",
+      description: "Claude・Felixなどを活用した効率的なコンテンツ制作術",
+      link: "https://www.udemy.com/course/feloclaudenapkinirusiru/?couponCode=202506PKG",
       gradient: "from-green-500 to-blue-500",
-      emoji: "📘"
+      emoji: "⚡",
+      duration: "3.5時間",
+      students: "800+",
+      rating: "4.7"
+    },
+    {
+      title: "サクッと作成する「伝わる図解」完全マスター講座",
+      description: "Claude・Zoom・NotebookLMを使った効果的な図解作成",
+      link: "https://www.udemy.com/course/claudezoomnotebooklm/?couponCode=202506FVD",
+      gradient: "from-pink-500 to-red-500", 
+      emoji: "📊",
+      duration: "4.5時間",
+      students: "600+",
+      rating: "4.6"
     }
   ];
 
@@ -38,31 +54,51 @@ export function ServicesSection() {
           {/* Header */}
           <div className="text-center space-y-6 mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
-              📦 <span className="text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text">AI × 副業で成果を出す3つのサービス</span>
+              🎓 <span className="text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text">Udemy講座ラインナップ</span>
             </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              AI時代の副業・スキルアップに必要な実践的な知識を学べる4つのコース
+            </p>
           </div>
           
-          {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {services.map((service, index) => (
+          {/* Courses Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {courses.map((course, index) => (
               <Card 
                 key={index} 
                 className="bg-gray-800/50 border-gray-700 backdrop-blur-sm hover:bg-gray-800/70 transition-all duration-300 group cursor-pointer"
-                onClick={() => window.open(service.link, '_blank')}
+                onClick={() => window.open(course.link, '_blank')}
               >
-                <CardHeader className="pb-6">
-                  <div className="text-center space-y-4">
-                    <div className="text-5xl">{service.emoji}</div>
-                    <CardTitle className="text-2xl text-white">{service.title}</CardTitle>
-                    <CardDescription className="text-lg text-gray-300">
-                      {service.description}
+                <CardHeader className="pb-4">
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between">
+                      <div className="text-4xl">{course.emoji}</div>
+                      <div className="flex items-center space-x-1">
+                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                        <span className="text-sm text-yellow-400 font-semibold">{course.rating}</span>
+                      </div>
+                    </div>
+                    <CardTitle className="text-xl text-white">{course.title}</CardTitle>
+                    <CardDescription className="text-gray-300">
+                      {course.description}
                     </CardDescription>
                   </div>
                 </CardHeader>
                 
-                <CardContent>
-                  <button className={`w-full py-3 px-4 rounded-lg font-semibold text-white transition-all duration-300 bg-gradient-to-r ${service.gradient} hover:scale-105 hover:shadow-lg`}>
-                    詳細を見る
+                <CardContent className="space-y-4">
+                  <div className="flex items-center justify-between text-sm text-gray-400">
+                    <div className="flex items-center space-x-1">
+                      <Clock className="w-4 h-4" />
+                      <span>{course.duration}</span>
+                    </div>
+                    <div className="flex items-center space-x-1">
+                      <Users className="w-4 h-4" />
+                      <span>{course.students}人受講</span>
+                    </div>
+                  </div>
+                  
+                  <button className={`w-full py-3 px-4 rounded-lg font-semibold text-white transition-all duration-300 bg-gradient-to-r ${course.gradient} hover:scale-105 hover:shadow-lg`}>
+                    講座詳細を見る
                   </button>
                 </CardContent>
               </Card>

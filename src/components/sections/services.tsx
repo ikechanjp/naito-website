@@ -49,35 +49,31 @@ export function ServicesSection() {
             </p>
           </div>
           
-          {/* Courses Carousel */}
-          <div className="relative">
-            <div className="overflow-x-auto scrollbar-hide">
-              <div className="flex gap-6 pb-4" style={{ width: 'max-content' }}>
-                {courses.map((course, index) => (
-                  <Card 
-                    key={index} 
-                    className="bg-gray-800/50 border-gray-700 backdrop-blur-sm hover:bg-gray-800/70 transition-all duration-300 group cursor-pointer flex-shrink-0 w-80"
-                    onClick={() => window.open(course.link, '_blank')}
-                  >
-                    <CardHeader className="pb-6">
-                      <div className="text-center space-y-4">
-                        <div className="text-5xl">{course.emoji}</div>
-                        <CardTitle className="text-xl text-white">{course.title}</CardTitle>
-                        <CardDescription className="text-base text-gray-300">
-                          {course.description}
-                        </CardDescription>
-                      </div>
-                    </CardHeader>
-                    
-                    <CardContent>
-                      <button className={`w-full py-3 px-4 rounded-lg font-semibold text-white transition-all duration-300 bg-gradient-to-r ${course.gradient} hover:scale-105 hover:shadow-lg`}>
-                        講座詳細を見る
-                      </button>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
+          {/* Courses Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {courses.map((course, index) => (
+              <Card 
+                key={index} 
+                className="bg-gray-800/50 border-gray-700 backdrop-blur-sm hover:bg-gray-800/70 transition-all duration-300 group cursor-pointer"
+                onClick={() => window.open(course.link, '_blank')}
+              >
+                <CardHeader className="pb-6">
+                  <div className="text-center space-y-4">
+                    <div className="text-5xl">{course.emoji}</div>
+                    <CardTitle className="text-2xl text-white">{course.title}</CardTitle>
+                    <CardDescription className="text-lg text-gray-300">
+                      {course.description}
+                    </CardDescription>
+                  </div>
+                </CardHeader>
+                
+                <CardContent>
+                  <button className={`w-full py-3 px-4 rounded-lg font-semibold text-white transition-all duration-300 bg-gradient-to-r ${course.gradient} hover:scale-105 hover:shadow-lg`}>
+                    講座詳細を見る
+                  </button>
+                </CardContent>
+              </Card>
+            ))}
           </div>
           
         </div>

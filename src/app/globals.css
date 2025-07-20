@@ -157,3 +157,13 @@
     transform: translate(var(--end-x), var(--end-y)) scale(0);
   }
 }
+
+/* Hide scrollbar for webkit browsers */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

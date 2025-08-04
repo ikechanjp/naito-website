@@ -8,28 +8,28 @@ export function ServicesSection() {
     {
       title: "Midjourney&にじジャーニー入門",
       description: "AI画像生成ツールの基礎から実践的な活用方法まで",
-      link: "https://www.udemy.com/course/midjourneyai/?couponCode=202506AZX",
+      link: "https://www.udemy.com/course/midjourneyai/?couponCode=202508AAA",
       gradient: "from-purple-500 to-pink-600",
       emoji: "🎨"
     },
     {
       title: "サクッと作成する「伝わる図解」完全マスター講座",
       description: "Claude・Zoom・NotebookLMを使った効果的な図解作成",
-      link: "https://www.udemy.com/course/claudezoomnotebooklm/?couponCode=202506FVD",
+      link: "https://www.udemy.com/course/claudezoomnotebooklm/?couponCode=202508AAA",
       gradient: "from-pink-500 to-red-500", 
       emoji: "📊"
     },
     {
       title: "AIで超時短コンテンツ作成",
       description: "Claude・Felixなどを活用した効率的なコンテンツ制作術",
-      link: "https://www.udemy.com/course/feloclaudenapkinirusiru/?couponCode=202506PKG",
+      link: "https://www.udemy.com/course/feloclaudenapkinirusiru/?couponCode=202508AAA",
       gradient: "from-green-500 to-blue-500",
       emoji: "⚡"
     },
     {
       title: "音声入力＆AI文字起こしで超時短術",
       description: "音声認識とAIを活用した効率的な文字起こし・文書作成術",
-      link: "https://www.udemy.com/course/voice_input/?couponCode=202506EFR",
+      link: "https://www.udemy.com/course/voice_input/?couponCode=202508AAA",
       gradient: "from-blue-500 to-purple-600",
       emoji: "🎤"
     }

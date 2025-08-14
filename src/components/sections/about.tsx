@@ -1,5 +1,6 @@
 'use client'
 
+import Image from "next/image";
 
 export function AboutSection() {
   return (
@@ -13,12 +14,29 @@ export function AboutSection() {
             </h2>
           </div>
           
-          {/* 3-line Profile */}
-          <div className="text-center space-y-4 mb-12">
-            <div className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed space-y-2">
-              <p>Udemyベストセラー＆Business講師／AI時短化でパパママを応援</p>
-              <p>AIで時間短縮しながら副業収益化する実践型サポーター</p>
-              <p>EverImpact主宰、Kindle著者『Midjourney超入門』</p>
+          {/* Profile Section with Avatar */}
+          <div className="flex flex-col lg:flex-row items-center gap-12 mb-12">
+            {/* Avatar */}
+            <div className="flex-shrink-0">
+              <div className="relative w-48 h-48 lg:w-56 lg:h-56">
+                <Image
+                  src="/images/profile/avatar.jpg"
+                  alt="ないと プロフィール写真"
+                  fill
+                  className="object-cover rounded-full border-4 border-purple-400/30 shadow-2xl"
+                  sizes="(max-width: 1024px) 192px, 224px"
+                />
+                <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-purple-400/20 to-pink-400/20"></div>
+              </div>
+            </div>
+            
+            {/* Profile Text */}
+            <div className="flex-1 text-center lg:text-left space-y-4">
+              <div className="text-lg md:text-xl text-gray-300 leading-relaxed space-y-3">
+                <p>Udemyベストセラー＆Business講師／AI時短化でパパママを応援</p>
+                <p>AIで時間短縮しながら副業収益化する実践型サポーター</p>
+                <p>EverImpact主宰、Kindle著者『Midjourney超入門』</p>
+              </div>
             </div>
           </div>
           

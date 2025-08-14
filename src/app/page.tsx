@@ -7,7 +7,7 @@ import { MouseStarDust } from "@/components/ui/shooting-stars";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black text-white" style={{ backgroundColor: '#000000', color: '#ffffff' }}>
+    <div className="min-h-screen bg-black text-white">
       <MouseStarDust />
       <HeroSection />
       <AboutSection />

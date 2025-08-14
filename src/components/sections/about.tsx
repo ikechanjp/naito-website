@@ -10,7 +10,7 @@ export function AboutSection() {
           {/* Header */}
           <div className="text-center space-y-6 mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
-              🧑‍💼 <span className="text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text">ないとって誰？</span>
+              <span className="text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text">ないとって誰？</span>
             </h2>
           </div>
           
@@ -26,7 +26,6 @@ export function AboutSection() {
                   className="object-cover rounded-full border-4 border-purple-400/30 shadow-2xl"
                   sizes="(max-width: 1024px) 192px, 224px"
                 />
-                <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-purple-400/20 to-pink-400/20"></div>
               </div>
             </div>
             

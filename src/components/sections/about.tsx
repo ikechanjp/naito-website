@@ -42,19 +42,15 @@ export function AboutSection() {
           {/* Achievement Icons */}
           <div className="flex flex-wrap justify-center gap-6 mb-12">
             <div className="flex items-center space-x-3 bg-gray-800/50 px-4 py-3 rounded-lg border border-gray-700">
-              <span className="text-2xl">🎓</span>
               <span className="text-white font-medium">Udemyベストセラー講座</span>
             </div>
             <div className="flex items-center space-x-3 bg-gray-800/50 px-4 py-3 rounded-lg border border-gray-700">
-              <span className="text-2xl">🏆</span>
               <span className="text-white font-medium">Udemy Business認定</span>
             </div>
             <div className="flex items-center space-x-3 bg-gray-800/50 px-4 py-3 rounded-lg border border-gray-700">
-              <span className="text-2xl">📘</span>
               <span className="text-white font-medium">Kindleベストセラー作家</span>
             </div>
             <div className="flex items-center space-x-3 bg-gray-800/50 px-4 py-3 rounded-lg border border-gray-700">
-              <span className="text-2xl">🌐</span>
               <span className="text-white font-medium">EverImpact主宰</span>
             </div>
           </div>

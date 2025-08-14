@@ -89,7 +89,7 @@ export function ContactSection() {
           {/* Newsletter Signup */}
           <Card className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 border-purple-500/20 backdrop-blur-sm">
             <CardHeader className="text-center">
-              <CardTitle className="text-2xl text-white">Newsletter 登録</CardTitle>
+              <CardTitle className="text-2xl text-white">メルマガ登録</CardTitle>
               <p className="text-gray-300">AI最新情報 + 限定クーポンを定期配信</p>
             </CardHeader>
             <CardContent>

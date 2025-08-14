@@ -23,7 +23,7 @@ export function ServicesSection() {
     },
     {
       title: "AIで超時短コンテンツ作成",
-      description: "Claude・Felixなどを活用した効率的なコンテンツ制作術",
+      description: "Claude・Feloなどを活用した効率的なコンテンツ制作術",
       link: "https://www.udemy.com/course/feloclaudenapkinirusiru/?couponCode=202508AAA",
       gradient: "from-green-500 to-blue-500",
       emoji: "⚡",

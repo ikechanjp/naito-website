@@ -1,7 +1,7 @@
 'use client'
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Star, Clock, Users } from "lucide-react";
+import Image from "next/image";
 
 export function ServicesSection() {
   const courses = [
@@ -10,28 +10,32 @@ export function ServicesSection() {
       description: "AI画像生成ツールの基礎から実践的な活用方法まで",
       link: "https://www.udemy.com/course/midjourneyai/?couponCode=202508AAA",
       gradient: "from-purple-500 to-pink-600",
-      emoji: "🎨"
+      emoji: "🎨",
+      thumbnail: "/images/courses/midjourney.png"
     },
     {
       title: "サクッと作成する「伝わる図解」完全マスター講座",
       description: "Claude・Zoom・NotebookLMを使った効果的な図解作成",
       link: "https://www.udemy.com/course/claudezoomnotebooklm/?couponCode=202508AAA",
       gradient: "from-pink-500 to-red-500", 
-      emoji: "📊"
+      emoji: "📊",
+      thumbnail: "/images/courses/zukai.png"
     },
     {
       title: "AIで超時短コンテンツ作成",
       description: "Claude・Felixなどを活用した効率的なコンテンツ制作術",
       link: "https://www.udemy.com/course/feloclaudenapkinirusiru/?couponCode=202508AAA",
       gradient: "from-green-500 to-blue-500",
-      emoji: "⚡"
+      emoji: "⚡",
+      thumbnail: "/images/courses/content.png"
     },
     {
       title: "音声入力＆AI文字起こしで超時短術",
       description: "音声認識とAIを活用した効率的な文字起こし・文書作成術",
       link: "https://www.udemy.com/course/voice_input/?couponCode=202508AAA",
       gradient: "from-blue-500 to-purple-600",
-      emoji: "🎤"
+      emoji: "🎤",
+      thumbnail: "/images/courses/voice.png"
     }
   ];
 
@@ -54,17 +58,28 @@ export function ServicesSection() {
             {courses.map((course, index) => (
               <Card 
                 key={index} 
-                className="bg-gray-800/50 border-gray-700 backdrop-blur-sm hover:bg-gray-800/70 transition-all duration-300 group cursor-pointer"
+                className="bg-gray-800/50 border-gray-700 backdrop-blur-sm hover:bg-gray-800/70 transition-all duration-300 group cursor-pointer overflow-hidden"
                 onClick={() => window.open(course.link, '_blank')}
               >
-                <CardHeader className="pb-6">
-                  <div className="text-center space-y-4">
-                    <div className="text-5xl">{course.emoji}</div>
-                    <CardTitle className="text-2xl text-white">{course.title}</CardTitle>
-                    <CardDescription className="text-lg text-gray-300">
-                      {course.description}
-                    </CardDescription>
+                {/* Thumbnail Image */}
+                <div className="relative h-48 w-full overflow-hidden bg-gray-700">
+                  <Image
+                    src={course.thumbnail}
+                    alt={course.title}
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                  <div className="absolute top-4 left-4 text-3xl bg-black/50 rounded-full p-2">
+                    {course.emoji}
                   </div>
+                </div>
+
+                <CardHeader className="pb-4">
+                  <CardTitle className="text-xl text-white line-clamp-2">{course.title}</CardTitle>
+                  <CardDescription className="text-sm text-gray-300 line-clamp-3">
+                    {course.description}
+                  </CardDescription>
                 </CardHeader>
                 
                 <CardContent>

@@ -70,9 +70,6 @@ export function ServicesSection() {
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
-                  <div className="absolute top-4 left-4 text-3xl bg-black/50 rounded-full p-2">
-                    {course.emoji}
-                  </div>
                 </div>
 
                 <CardHeader className="pb-4">

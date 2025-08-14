@@ -29,11 +29,7 @@ export function HeroSection() {
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
               />
               <br />
-              パパママに
-              <span className="bg-gradient-to-r from-blue-400 to-pink-400 bg-clip-text text-transparent">「時短」</span>
-              と
-              <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">「収益」</span>
-              を
+              パパママに<span className="bg-gradient-to-r from-blue-400 to-pink-400 bg-clip-text text-transparent">「時短」</span>と<span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">「収益」</span>を
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">

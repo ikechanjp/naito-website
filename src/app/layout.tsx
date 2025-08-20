@@ -15,6 +15,28 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "ないと — AI × 副業ハイブリッドで時間と夢を最速実現",
   description: "Udemyベストセラー講師・AI活用コンサルタントないと氏のオフィシャルサイト。AI × 副業で忙しい社会人の時間と夢を最速実現する伴走者。",
+  openGraph: {
+    title: "ないと — AI × 副業ハイブリッドで時間と夢を最速実現",
+    description: "Udemyベストセラー講師・AI活用コンサルタントないと氏のオフィシャルサイト。AI × 副業で忙しい社会人の時間と夢を最速実現する伴走者。",
+    url: "https://naito-website.vercel.app",
+    siteName: "ないと オフィシャルサイト",
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "ないと — AI × 副業ハイブリッドで時間と夢を最速実現",
+      },
+    ],
+    locale: "ja_JP",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ないと — AI × 副業ハイブリッドで時間と夢を最速実現",
+    description: "Udemyベストセラー講師・AI活用コンサルタントないと氏のオフィシャルサイト。AI × 副業で忙しい社会人の時間と夢を最速実現する伴走者。",
+    images: ["/images/og-image.jpg"],
+  },
 };
 
 export default function RootLayout({

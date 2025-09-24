@@ -36,6 +36,15 @@ export function ServicesSection() {
       gradient: "from-blue-500 to-purple-600",
       emoji: "🎤",
       thumbnail: "/images/courses/voice.png"
+    },
+    {
+      title: "GAMMAでAIスライド完全攻略！",
+      description: "AIを活用したプレゼンテーション作成の完全マスター講座",
+      link: "https://www.udemy.com/course/gammaai-x/?couponCode=202509DDD",
+      gradient: "from-orange-500 to-yellow-500",
+      emoji: "📈",
+      thumbnail: "/images/courses/gamma.png",
+      isNew: true
     }
   ];
 
@@ -49,7 +58,7 @@ export function ServicesSection() {
               🎓 <span className="text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text">Udemy講座ラインナップ</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              AI時代の副業・スキルアップに必要な実践的な知識を学べる4つのコース
+              AI時代の副業・スキルアップに必要な実践的な知識を学べる5つのコース
             </p>
           </div>
           
@@ -70,6 +79,11 @@ export function ServicesSection() {
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
+                  {course.isNew && (
+                    <div className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
+                      NEW
+                    </div>
+                  )}
                 </div>
 
                 <CardHeader className="pb-4">

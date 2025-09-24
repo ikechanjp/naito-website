@@ -44,7 +44,7 @@ export function HeroSection() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 pt-12 max-w-5xl mx-auto">
             <div className="text-center">
               <div className="text-base sm:text-lg font-semibold text-white">Udemy受講者</div>
-              <div className="text-base sm:text-lg font-semibold text-white">2,000名以上</div>
+              <div className="text-base sm:text-lg font-semibold text-white">3,000名以上</div>
             </div>
             <div className="text-center">
               <div className="text-base sm:text-lg font-semibold text-white">Udemy Business</div>

@@ -101,7 +101,19 @@ export function ServicesSection() {
               </Card>
             ))}
           </div>
-          
+
+          {/* Kindle Button */}
+          <div className="mt-12 text-center">
+            <a
+              href="https://www.amazon.co.jp/stores/author/B0912GFJ41?ingress=0&visitId=89cc3f9e-b944-47b7-808a-f9ee582014a6&ref_=ap_rdr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block py-4 px-8 rounded-lg font-semibold text-white transition-all duration-300 bg-gradient-to-r from-orange-500 to-amber-500 hover:scale-105 hover:shadow-lg text-lg"
+            >
+              📚 Kindle本をチェックする
+            </a>
+          </div>
+
         </div>
       </div>
     </section>

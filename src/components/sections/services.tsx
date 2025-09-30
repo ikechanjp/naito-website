@@ -108,7 +108,7 @@ export function ServicesSection() {
               href="https://www.amazon.co.jp/stores/author/B0912GFJ41?ingress=0&visitId=89cc3f9e-b944-47b7-808a-f9ee582014a6&ref_=ap_rdr"
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full py-12 px-8 rounded-2xl font-bold text-white transition-all duration-300 bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-500 hover:scale-105 hover:shadow-2xl text-3xl md:text-4xl text-center shadow-xl border-4 border-yellow-400/30"
+              className="block w-full py-12 px-8 rounded-2xl font-bold text-white transition-all duration-300 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:scale-105 hover:shadow-2xl text-3xl md:text-4xl text-center shadow-xl border-4 border-purple-400/30"
             >
               📚 Kindle本をチェックする 📚
             </a>

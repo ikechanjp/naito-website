@@ -103,14 +103,14 @@ export function ServicesSection() {
           </div>
 
           {/* Kindle Button */}
-          <div className="mt-12 text-center">
+          <div className="mt-16">
             <a
               href="https://www.amazon.co.jp/stores/author/B0912GFJ41?ingress=0&visitId=89cc3f9e-b944-47b7-808a-f9ee582014a6&ref_=ap_rdr"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block py-4 px-8 rounded-lg font-semibold text-white transition-all duration-300 bg-gradient-to-r from-orange-500 to-amber-500 hover:scale-105 hover:shadow-lg text-lg"
+              className="block w-full py-12 px-8 rounded-2xl font-bold text-white transition-all duration-300 bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-500 hover:scale-105 hover:shadow-2xl text-3xl md:text-4xl text-center shadow-xl border-4 border-yellow-400/30"
             >
-              📚 Kindle本をチェックする
+              📚 Kindle本をチェックする 📚
             </a>
           </div>
 

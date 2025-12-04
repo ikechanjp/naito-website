@@ -8,7 +8,7 @@ export function ServicesSection() {
     {
       title: "Midjourney&にじジャーニー入門",
       description: "AI画像生成ツールの基礎から実践的な活用方法まで",
-      link: "https://www.udemy.com/course/midjourneyai/?couponCode=202511PPP",
+      link: "https://www.udemy.com/course/midjourneyai/?couponCode=202512QQQ",
       gradient: "from-purple-500 to-pink-600",
       emoji: "🎨",
       thumbnail: "/images/courses/midjourney.png"
@@ -16,7 +16,7 @@ export function ServicesSection() {
     {
       title: "サクッと作成する「伝わる図解」完全マスター講座",
       description: "Claude・Zoom・NotebookLMを使った効果的な図解作成",
-      link: "https://www.udemy.com/course/claudezoomnotebooklm/?couponCode=202511PPP",
+      link: "https://www.udemy.com/course/claudezoomnotebooklm/?couponCode=202512QQQ",
       gradient: "from-pink-500 to-red-500", 
       emoji: "📊",
       thumbnail: "/images/courses/zukai.png"
@@ -24,7 +24,7 @@ export function ServicesSection() {
     {
       title: "AIで超時短コンテンツ作成",
       description: "Claude・Feloなどを活用した効率的なコンテンツ制作術",
-      link: "https://www.udemy.com/course/feloclaudenapkinirusiru/?couponCode=202511PPP",
+      link: "https://www.udemy.com/course/feloclaudenapkinirusiru/?couponCode=202512QQQ",
       gradient: "from-green-500 to-blue-500",
       emoji: "⚡",
       thumbnail: "/images/courses/content.png"
@@ -32,7 +32,7 @@ export function ServicesSection() {
     {
       title: "音声入力＆AI文字起こしで超時短術",
       description: "音声認識とAIを活用した効率的な文字起こし・文書作成術",
-      link: "https://www.udemy.com/course/voice_input/?couponCode=202511PPP",
+      link: "https://www.udemy.com/course/voice_input/?couponCode=202512QQQ",
       gradient: "from-blue-500 to-purple-600",
       emoji: "🎤",
       thumbnail: "/images/courses/voice.png"
@@ -40,7 +40,7 @@ export function ServicesSection() {
     {
       title: "GAMMAでAIスライド完全攻略！",
       description: "AIを活用したプレゼンテーション作成の完全マスター講座",
-      link: "https://www.udemy.com/course/gammaai-x/?couponCode=202511PPP",
+      link: "https://www.udemy.com/course/gammaai-x/?couponCode=202512QQQ",
       gradient: "from-orange-500 to-yellow-500",
       emoji: "📈",
       thumbnail: "/images/courses/gamma.png"
@@ -48,7 +48,7 @@ export function ServicesSection() {
     {
       title: "副業時代の時間管理術",
       description: "忙しい社会人が効率的に時間を活用し、副業と本業を両立する実践的な時間管理術",
-      link: "https://www.udemy.com/course/time-management-24/?couponCode=202511PPP",
+      link: "https://www.udemy.com/course/time-management-24/?couponCode=202512QQQ",
       gradient: "from-indigo-500 to-cyan-500",
       emoji: "⏰",
       thumbnail: "/images/courses/time.png",

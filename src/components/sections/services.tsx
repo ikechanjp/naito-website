@@ -9,7 +9,7 @@ export function ServicesSection() {
       title: "Midjourney&にじジャーニー入門",
       description: "AI画像生成ツールの基礎から実践的な活用方法まで",
       link: "https://www.udemy.com/course/midjourneyai/?couponCode=202512QQQ",
-      gradient: "from-purple-500 to-pink-600",
+      gradient: "from-rose-400 to-pink-400",
       emoji: "🎨",
       thumbnail: "/images/courses/midjourney.png"
     },
@@ -17,7 +17,7 @@ export function ServicesSection() {
       title: "サクッと作成する「伝わる図解」完全マスター講座",
       description: "Claude・Zoom・NotebookLMを使った効果的な図解作成",
       link: "https://www.udemy.com/course/claudezoomnotebooklm/?couponCode=202512QQQ",
-      gradient: "from-pink-500 to-red-500", 
+      gradient: "from-orange-400 to-amber-400", 
       emoji: "📊",
       thumbnail: "/images/courses/zukai.png"
     },
@@ -25,7 +25,7 @@ export function ServicesSection() {
       title: "AIで超時短コンテンツ作成",
       description: "Claude・Feloなどを活用した効率的なコンテンツ制作術",
       link: "https://www.udemy.com/course/feloclaudenapkinirusiru/?couponCode=202512QQQ",
-      gradient: "from-green-500 to-blue-500",
+      gradient: "from-teal-400 to-cyan-400",
       emoji: "⚡",
       thumbnail: "/images/courses/content.png"
     },
@@ -33,7 +33,7 @@ export function ServicesSection() {
       title: "音声入力＆AI文字起こしで超時短術",
       description: "音声認識とAIを活用した効率的な文字起こし・文書作成術",
       link: "https://www.udemy.com/course/voice_input/?couponCode=202512QQQ",
-      gradient: "from-blue-500 to-purple-600",
+      gradient: "from-sky-400 to-blue-400",
       emoji: "🎤",
       thumbnail: "/images/courses/voice.png"
     },
@@ -41,7 +41,7 @@ export function ServicesSection() {
       title: "GAMMAでAIスライド完全攻略！",
       description: "AIを活用したプレゼンテーション作成の完全マスター講座",
       link: "https://www.udemy.com/course/gammaai-x/?couponCode=202512QQQ",
-      gradient: "from-orange-500 to-yellow-500",
+      gradient: "from-amber-400 to-orange-400",
       emoji: "📈",
       thumbnail: "/images/courses/gamma.png"
     },
@@ -49,7 +49,7 @@ export function ServicesSection() {
       title: "副業時代の時間管理術",
       description: "忙しい社会人が効率的に時間を活用し、副業と本業を両立する実践的な時間管理術",
       link: "https://www.udemy.com/course/time-management-24/?couponCode=202512QQQ",
-      gradient: "from-indigo-500 to-cyan-500",
+      gradient: "from-rose-400 to-orange-400",
       emoji: "⏰",
       thumbnail: "/images/courses/time.png",
       isNew: true
@@ -57,15 +57,15 @@ export function ServicesSection() {
   ];
 
   return (
-    <section className="py-20 bg-gray-900">
+    <section className="py-20 bg-gradient-to-b from-amber-50 to-rose-50">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center space-y-6 mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
-              🎓 <span className="text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text">Udemy講座ラインナップ</span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800">
+              🎓 <span className="text-transparent bg-gradient-to-r from-rose-500 to-orange-500 bg-clip-text">Udemy講座ラインナップ</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               AI時代の副業・スキルアップに必要な実践的な知識を学べる6つのコース
             </p>
           </div>
@@ -75,7 +75,7 @@ export function ServicesSection() {
             {courses.map((course, index) => (
               <Card 
                 key={index} 
-                className="bg-gray-800/50 border-gray-700 backdrop-blur-sm hover:bg-gray-800/70 transition-all duration-300 group cursor-pointer overflow-hidden"
+                className="bg-white border-rose-200 backdrop-blur-sm hover:shadow-xl transition-all duration-300 group cursor-pointer overflow-hidden"
                 onClick={() => window.open(course.link, '_blank')}
               >
                 {/* Thumbnail Image */}
@@ -95,8 +95,8 @@ export function ServicesSection() {
                 </div>
 
                 <CardHeader className="pb-4">
-                  <CardTitle className="text-xl text-white line-clamp-2">{course.title}</CardTitle>
-                  <CardDescription className="text-sm text-gray-300 line-clamp-3">
+                  <CardTitle className="text-xl text-gray-800 line-clamp-2">{course.title}</CardTitle>
+                  <CardDescription className="text-sm text-gray-600 line-clamp-3">
                     {course.description}
                   </CardDescription>
                 </CardHeader>
@@ -116,7 +116,7 @@ export function ServicesSection() {
               href="https://www.amazon.co.jp/stores/author/B0912GFJ41?ingress=0&visitId=89cc3f9e-b944-47b7-808a-f9ee582014a6&ref_=ap_rdr"
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full py-12 px-8 rounded-2xl font-bold text-white transition-all duration-300 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:scale-105 hover:shadow-2xl text-3xl md:text-4xl text-center shadow-xl border-4 border-purple-400/30"
+              className="block w-full py-12 px-8 rounded-2xl font-bold text-white transition-all duration-300 bg-gradient-to-r from-rose-400 via-orange-400 to-amber-400 hover:scale-105 hover:shadow-2xl text-3xl md:text-4xl text-center shadow-xl border-4 border-rose-200"
             >
               📚 Kindle本をチェックする 📚
             </a>

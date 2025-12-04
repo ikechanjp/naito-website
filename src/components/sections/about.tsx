@@ -4,13 +4,13 @@ import Image from "next/image";
 
 export function AboutSection() {
   return (
-    <section className="py-20 bg-gradient-to-b from-black to-gray-900">
+    <section className="py-20 bg-gradient-to-b from-rose-50 to-orange-50">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="max-w-5xl mx-auto">
           {/* Header */}
           <div className="text-center space-y-6 mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
-              <span className="text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text">ないとって誰？</span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800">
+              <span className="text-transparent bg-gradient-to-r from-rose-500 to-orange-500 bg-clip-text">ないとって誰？</span>
             </h2>
           </div>
           
@@ -23,7 +23,7 @@ export function AboutSection() {
                   src="/images/profile/avatar.jpg"
                   alt="ないと プロフィール写真"
                   fill
-                  className="object-cover rounded-full border-4 border-purple-400/30 shadow-2xl"
+                  className="object-cover rounded-full border-4 border-rose-300 shadow-2xl"
                   sizes="(max-width: 1024px) 192px, 224px"
                 />
               </div>
@@ -31,7 +31,7 @@ export function AboutSection() {
             
             {/* Profile Text */}
             <div className="flex-1 text-center lg:text-left space-y-4">
-              <div className="text-lg md:text-xl text-gray-300 leading-relaxed space-y-3">
+              <div className="text-lg md:text-xl text-gray-700 leading-relaxed space-y-3">
                 <p>Udemyベストセラー＆Business講師／AI時短化でパパママを応援</p>
                 <p>AIで時間短縮しながら副業収益化する実践型サポーター</p>
                 <p>EverImpact主宰、Kindle著者『Midjourney超入門』</p>
@@ -41,9 +41,9 @@ export function AboutSection() {
           
           
           {/* Mission Section */}
-          <div className="text-center bg-gradient-to-r from-purple-900/30 to-pink-900/30 rounded-xl p-8 border border-gray-700">
-            <h3 className="text-2xl font-bold text-white mb-4">🎯 Mission（ミッション）</h3>
-            <blockquote className="text-xl md:text-2xl text-gray-200 font-medium">
+          <div className="text-center bg-white rounded-xl p-8 border-2 border-rose-200 shadow-md">
+            <h3 className="text-2xl font-bold text-gray-800 mb-4">🎯 Mission（ミッション）</h3>
+            <blockquote className="text-xl md:text-2xl text-gray-700 font-medium">
               忙しくても、AIを味方に「夢へ最短で向かう力」を届ける。
             </blockquote>
           </div>
